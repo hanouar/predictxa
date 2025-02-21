@@ -42,7 +42,8 @@ def predict_price(lstm_model, xgb_model, scaler):
         if gold_latest is None:
             return None, None, None
         
-        current_price = gold_latest['Close'].values[0]
+        # Extract current price as a scalar value
+        current_price = gold_latest['Close'].values[0].item()  # Convert to scalar
         
         # Preprocess
         latest_features = gold_latest[['Open', 'High', 'Low', 'Close', 'Volume']].values
