@@ -99,7 +99,6 @@ def main():
     
     # Create sidebar
     st.sidebar.header("About")
-    st.sidebar.info("This app predicts next-day gold prices using hybrid LSTM-XGBoost model.")
     
     # Prediction section
     if st.button("Refresh Predictions"):
